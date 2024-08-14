@@ -1,149 +1,91 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>七夕礼物</title>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>恋爱清单一百件事</title>
+    <meta name="keywords" content="相爱,恋爱清单,相爱的十件事,相爱十件事,男生,女生" />
+    <meta name="description" content="这里记录了 @ 和  相爱的十件事。相信我们还会留下更多美好的回忆，谢谢大家的 祝福 ！" />
+    <link rel="shortcut icon" href="https://cdn.xiaojunkang.com/love/favicon.ico">
+    <link rel="apple-touch-icon" href="https://cdn.xiaojunkang.com/love/favicon.ico">
+    <link href="https://cdn.xiaojunkang.com/love/style.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+	<script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+	<script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
 </head>
-<style>
-    body {
-        text-align: center;
-        display: flex;
-        justify-content: center;
-    }
-
-    .button {
-        background-color: #4CAF50;
-        /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-    }
-
-    .bg {
-        background: url(img/bg.jpg);
-        background-size: cover;
-        position: fixed;
-        top: -20px;
-        left: -20px;
-        right: -20px;
-        bottom: -20px;
-        -webkit-filter: blur(15px);
-        filter: blur(15px);
-        z-index: -1;
-    }
-
-    .blockDiv {
-        margin-top: 12rem;
-        width: 12rem;
-        display: flex;
-        flex-wrap: wrap;
-        text-align: center;
-    }
-
-    .block {
-        width: calc(calc(100% / 3) - 10px);
-        margin: 5px;
-        height: 50px;
-        box-sizing: border-box;
-        border: 1px solid #000;
-        text-align: center;
-        background: rgb(0, 0, 0);
-        border-radius:5px
-    }
-
-    .red {
-        border: 1px solid red;
-        background: red;
-    }
-    p{
-            margin:auto auto;
-            align-items: center;
-    }
-</style>
 
 <body>
-    <div class='bg'></div>
-    <div id="app">
-        <div class="blockDiv">
-            <div class='block' :class="{ red:changeRed == index}" v-for="(item,index) in items">
-              <p> {{ item }}</p>
-            </div>
-
-        </div>
-        <button class='button' @click='runit'>{{ btntext }}</button>
-
+    <!--[if lt IE 9]>
+    <div class="browsehappy" role="dialog">
+    当前网页 <strong>不支持</strong> 你正在使用的浏览器. 为了正常的访问, 请升级你的浏览器</a>。
     </div>
+    <![endif]-->
+
+    <div class="container grid-sm s-content header">
+        <div class="column col-12">
+            <h1 class="logo">
+                <i class="ico i-love"></i>
+                <a href="/">相爱</a>
+            </h1>
+            <p class="description">这里记录了 <a href="#" target="_blank">@曹杰鸿</a> 和 夏先雯<a href="#" target="_blank">@张佳琪</a> 相爱的100件事。<br>我们的恋爱清单，有10件充满爱的事记录我们的相恋历程。</p>
+        </div>
+    </div>
+    <div class="container grid-sm s-content posts">
+        <div class="column col-12">
+            <ol>
+                <!--如果完成一项条件就修改一点点代码  class="done"  删除线：<del>条件</del>-->
+                <li class=>
+                    <p>手牵手逛街</p>
+                </li>
+                <li class=>
+                    <p>一起去游乐园</p>
+                </li>
+                <li class=>
+                    <p>一起坐摩天轮</p>
+                </li>
+                <li class=>
+                    <p>互相喂东西吃</p>
+                </li>
+                <li class=>
+                    <p>一起看电影</p>
+                </li>
+                <li class=>
+                    <p>一起去溜狗</p>
+                </li>
+                <li class=>
+                    <p>一起去看动物园</p>
+                </li>
+                <li class=>
+                    <p>一起去按摩</p>
+                </li>
+                <li class=>
+                    <p>为你系鞋带</p>
+                </li>
+                <li class=>
+                    <p>一起去散步</p>
+                </li>
+                <li class=>
+                  </li>
+            </ol>
+        </div>
+    </div>
+
+
+    <div class="container grid-sm s-content footer">
+        <div class="column col-12">
+            <p>© Love list〔恋爱清单〕 All rights reserved.<a class="top" href="#">返回顶部</a></p>
+        </div>
+    </div>
+
+
 </body>
 
-<script>
-    var app = new Vue({
-        el: '#app',
-        data: {
-            items: [
-                '抱抱对方',
-                '亲亲对方',
-                '一起去按摩',
-                '一起去逛街',
-                '一起去看电影',
-                '一起去游乐园',
-                '给曹杰鸿写信',
-                '说喜欢曹杰鸿',
-                '一起去吃东西'
-            ],
-            changeRed: -1,
-            btntext: "抽奖",
-            randoing: null,
-            idx: 0,
-            stoping: false
-        },
-        methods: {
-            runit() {
-                if (this.btntext === '停止') {
-                    if (this.stoping) {
-                        return;
-                    }
-                    setTimeout(() => {
-                        clearInterval(this.randoing)
-
-                        this.btntext = '开始'
-                        let p = this.idx - 1;
-                        if (this.idx - 1 < 0) {
-                            p = 8
-                        }
-                        alert('恭喜你获得了:' + this.items[p])
-                        this.stoping = false;
-                    }, 2000)
-                    this.stoping = true;
-
-                } else {
-
-                    this.randoing = setInterval(() => {
-
-                        this.change(this.idx)
-                        this.idx++
-                        if (this.idx >= this.items.length) {
-                            this.idx = 0
-                        }
-                    }, 200)
-                    this.btntext = '停止'
-                }
-
-            },
-            change(index) {
-                this.changeRed = index;
-            }
-
-        }
-    })
-</script>
-
 </html>
+
